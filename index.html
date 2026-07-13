@@ -452,7 +452,7 @@
     const r=document.createElement("div");
     r.className="row";
     r.innerHTML=`<span class="n">${String(i+1).padStart(2,"0")}</span><span class="rt">${pr.name}</span>
-      <span class="rc">${pr.tag}</span><span class="ry">${pr.year}</span>`;
+      <span class="rc">${pr.tag}</span>`;
     r.addEventListener("mouseenter",()=>{thumbImg.style.backgroundImage=`url(${IMG[pr.key]})`;thumb.classList.add("show");});
     r.addEventListener("mouseleave",()=>thumb.classList.remove("show"));
     r.addEventListener("click",()=>openProjectPage(i));
@@ -470,7 +470,7 @@
     s.innerHTML=`
       <div class="s-side">
         <span class="s-title" data-open="${i}">${pr.name}</span>
-        <span class="s-tag">${pr.tag} ::: ${pr.year}</span>
+        <span class="s-tag">${pr.tag}</span>
         <div class="s-links">
           ${pr.live?`<a href="${pr.live}" target="_blank" rel="noopener">Live site ↗</a>`:""}
           <a href="${pr.repo}" target="_blank" rel="noopener">GitHub ↗</a>
@@ -496,13 +496,12 @@
       <div class="d-hero" style="background-image:url(${im})">
         <div class="d-title">
           <div class="nm">${pr.name}</div>
-          <div class="tg">${pr.tag} ::: ${pr.year}</div>
+          <div class="tg">${pr.tag}</div>
         </div>
       </div>
       <div class="d-info">
         <p class="brief">${pr.brief}</p>
         <div class="d-facts">
-          <div class="f"><span class="k">Year</span><span class="v">${pr.year}</span></div>
           <div class="f"><span class="k">Role</span><span class="v">Design, engineering, evals: end to end</span></div>
           <div class="f"><span class="k">Stack</span><span class="v">${pr.stack}</span></div>
           <div class="f"><span class="k">Links</span><span class="v">
